@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  transmission:
+    build:
+      context: http://git.dwhd.org/lookback/docker-transmission.git
+    restart: always
+    image: transmission:2.92
+    ports:
+    - "9091:9091"
+    - "51413:51413"
+    - "51413/udp:51413/udp"
+    volumes:
+    - /data/transmission-data:/data
+    - /etc/localtime:/etc/localtime
+    environment:
+    - ADMIN_USER=lookback
+    - ADMIN_PASS=lookback
