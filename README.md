@@ -11,5 +11,5 @@ Application container, don't forget to specify a password for `transmission` acc
     -e ADMIN_PASS=password \
     -e ADMIN_USER=lookback
     -v /data/transmission:/data \
-    transmission:2.92
+    benyoo/transmission
 ```
